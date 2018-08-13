@@ -1,14 +1,12 @@
 <form method="POST" action="/figures">
     Name <input type="text" id="figure_name" name="figure[name]"><br></br>
     
-  <label><h4>Titles</h4></label>
-    <% Title.all.each do |title| %>
+    <h3>Titles</h3><% Title.all.each do |title| %>
       <label><%= title.name %></label>
       <input type="checkbox" id="title_<%=title.id%>" name="figure[title_ids][]" value="<%= title.id %>"><br>
 
     <% end %>
- <label><h4>Create New Title:</h4></label>
-  <input type="text" id="new_title" name="title[name]">
+ <h3>Create New Title:</h3><input type="text" id="new_title" name="title[name]">
   
 
   <label><h4>Landmarks</h4></label>
