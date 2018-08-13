@@ -7,14 +7,14 @@
     <%= landmark.name %>
     <input type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>" id="<%= landmark.name %>" <%='checked' if @figure.landmarks.include?(landmark) %>>
   <% end %>
- Add New: <input type="text" id="new_landmark" name="landmark[name]"><br></br>
+ Add New: <input type="text" id="new_landmark" name="landmark[name]"><br>
 
  
   Edit Titles <% Title.all.each do |title| %>
     <%= title.name %>
     <input type="checkbox" name="figure[title_ids][]" value="<%= title.id %>" id="<%= title.name %>" <%='checked' if @figure.titles.include?(title) %>>
   <% end %></br>
- Add New Title: <input type="text" id="new_title" name="title[name]"><br></br>
+ Add New Title: <input type="text" id="new_title" name="title[name]"><br>
 
 
 
