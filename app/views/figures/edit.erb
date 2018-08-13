@@ -1,7 +1,7 @@
 <form method="POST" action="/figures/<%= @figure.id %>">
   <input type="hidden" name="_method" value="patch">
-  Name<input type="text" id="figure_name" name="figure[name]" value="<%= @figure.name%>"><br></br>
-  <label>Edit Landmarks:</label><br>
+  Name<input type="text" id="figure_name" name="figure[name]" value="<%= @figure.name%>">
+  Edit Landmarks:
   
   <% Landmark.all.each do |landmark| %>
     <label><%= landmark.name %></label>
